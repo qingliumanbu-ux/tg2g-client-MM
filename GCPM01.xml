@@ -1,0 +1,3802 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GCPM01</name>
+    </assembly>
+    <members>
+        <member name="T:GC.DataSetGCPM">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:GC.DataSetGCPM.GCPMA2_CHARTDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:GC.DataSetGCPM.GCPMA2_CHARTRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:GC.DataSetGCPM.GCPMA2_CHARTRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIZ2.p_do_qt(System.String,System.Int32)">
+            <summary>
+            其他自定义按钮的serivce 信息操作。
+            </summary>
+            <param name="v_button_flag">按钮标志，比如 F6,F7,F8等。</param>
+            <param name="show_flag"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ2.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIZ2.FormGCPMSIZ2_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            信息新增。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ2.FormGCPMSIZ2_EF_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            信息修改。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ2.FormGCPMSIZ2_EF_DO_F5(System.Object,EF.EF_Args)">
+            <summary>
+            信息删除。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ2.gridView1_ShowingEditor(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            grid编辑事件
+            <para>对于未选中的行，不可进入编辑模式</para>
+            <para>设置哪些单元格可以进入编辑模式</para>
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIZ2.efTreeView1_AfterSelect(System.Object,System.Windows.Forms.TreeViewEventArgs)">
+            <summary>
+            树中节点的选中事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ2.FormGCPMSIZ2_EF_DO_FC(System.Object,EF.EF_Args)">
+            <summary>
+            业务履历查询。。。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ2.FormGCPMSIZ2_EF_DO_F6(System.Object,EF.EF_Args)">
+            <summary>
+            F6-自定义按钮。。。。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ2.FormGCPMSIZ2_EF_DO_F7(System.Object,EF.EF_Args)">
+            <summary>
+            F7-自定义按钮。。。。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ2.FormGCPMSIZ2_EF_DO_F9(System.Object,EF.EF_Args)">
+            <summary>
+            数据失效。。。并生成最新的VIEW.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ2.FormGCPMSIZ2_EF_DO_FA(System.Object,EF.EF_Args)">
+            <summary>
+            数据生效。。。并生成对应的VIEW 信息。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMSIZ2.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIZ2.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ2.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIZ1.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIZ1.FormGCPMSIZ1_Load(System.Object,System.EventArgs)">
+            <summary>
+            画面加载点，初始化相关信息， 比如显示列信息的。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ1.FormGCPMSIZ1_EFCGridDevCellValueChanged(System.Object,EFX.EFCGridImp.EFCGridEventArgs.EFCGridDevCellValueChangedEevntArgs)">
+            <summary>
+            根据不同的业务表名称，显示不同的ED54信息。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ1.FormGCPMSIZ1_EF_DO_F2(System.Object,EF.EF_Args)">
+            <summary>
+            非分页模式。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ1.FormGCPMSIZ1_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ1.FormGCPMSIZ1_EF_PRE_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ1.FormGCPMSIZ1_EF_PRE_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ1.FormGCPMSIZ1_EF_CANCEL_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ1.FormGCPMSIZ1_EF_CANCEL_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ1.FormGCPMSIZ1_EF_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ1.FormGCPMSIZ1_EF_DO_F5(System.Object,EF.EF_Args)">
+            <summary>
+            删除
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ1.FormGCPMSIZ1_EF_DO_FC(System.Object,EF.EF_Args)">
+            <summary>
+            跳转到操作履历画面。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMSIZ1.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIZ1.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMSIZ1.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZA3.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZA3.FormGCPMZA3_Load(System.Object,System.EventArgs)">
+            <summary>
+            画面加载点，初始化相关信息， 比如显示列信息的。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZA3.FormGCPMZA3_EF_DO_F2(System.Object,EF.EF_Args)">
+            <summary>
+            非分页模式。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZA3.FormGCPMZA3_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZA3.FormGCPMZA3_EF_PRE_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZA3.FormGCPMZA3_EF_PRE_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZA3.FormGCPMZA3_EF_CANCEL_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZA3.FormGCPMZA3_EF_CANCEL_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZA3.FormGCPMZA3_EF_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZA3.FormGCPMZA3_EF_DO_F5(System.Object,EF.EF_Args)">
+            <summary>
+            删除
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZA3.FormGCPMZA3_EF_DO_FC(System.Object,EF.EF_Args)">
+            <summary>
+            跳转到操作履历画面。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMZA3.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZA3.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMZA3.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSI02.p_query_help(System.Int32)">
+            <summary>
+            帮助说明信息。
+            </summary>
+            <param name="show_flag"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI02.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSI02.FormGCPMSI02_EF_DO_F2(System.Object,EF.EF_Args)">
+            <summary>
+            非分页模式。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI02.FormGCPMSI02_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI02.FormGCPMSI02_EF_PRE_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI02.FormGCPMSI02_EF_PRE_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI02.FormGCPMSI02_EF_CANCEL_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI02.FormGCPMSI02_EF_CANCEL_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI02.FormGCPMSI02_EF_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI02.FormGCPMSI02_EF_DO_F5(System.Object,EF.EF_Args)">
+            <summary>
+            删除
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI02.FormGCPMSI02_EF_DO_FC(System.Object,EF.EF_Args)">
+            <summary>
+            跳转到操作履历画面。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI02.FormGCPMSI02_EF_DO_FB(System.Object,EF.EF_Args)">
+            <summary>
+            画面跳转
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI02.FormGCPMSI02_EF_DO_F6(System.Object,EF.EF_Args)">
+            <summary>
+            配置信息 初始化。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI02.FormGCPMSI02_EF_DO_F7(System.Object,EF.EF_Args)">
+            <summary>
+            子画面生效
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI02.FormGCPMSI02_EF_DO_F1(System.Object,EF.EF_Args)">
+            <summary>
+            显示帮助信息。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI02.FormGCPMSI02_EF_DO_FA(System.Object,EF.EF_Args)">
+            <summary>
+            配置信息校验。。。给出配置缺失信息。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI02.gridView1_FocusedRowChanged(System.Object,DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs)">
+            <summary>
+            当前行发生变化的时候。。。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI02.FormGCPMSI02_EF_DO_F8(System.Object,EF.EF_Args)">
+            <summary>
+            根据前台信息， 整理导入，不加工处理。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI02.FormGCPMSI02_EF_PRE_DO_F8(System.Object,EF.EF_Args)">
+            <summary>
+            导入-预处理。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMSI02.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSI02.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMSI02.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF1G.p_group_grid(EF.EFDevGrid,System.String)">
+            <summary>
+            根据ED54功能号，将指定列进行分组显示。
+            </summary>
+            <param name="efGrid_now">指定GRID</param>
+            <param name="v_funcid">ED54功能号</param>
+        </member>
+        <member name="M:GC.FormGCPMSIF1G.p_do_qt(System.String,System.Int32)">
+            <summary>
+            其他自定义按钮的serivce 信息操作。
+            </summary>
+            <param name="v_button_flag">按钮标志，比如 F6,F7,F8等。</param>
+            <param name="show_flag"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF1G.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF1G.gridView1_ShowingEditor(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            grid编辑事件
+            <para>对于未选中的行，不可进入编辑模式</para>
+            <para>设置哪些单元格可以进入编辑模式</para>
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF1G.FormGCPMSIF1G_EF_DO_FC(System.Object,EF.EF_Args)">
+            <summary>
+            业务履历查询。。。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMSIF1G.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF1G.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMSIF1G.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF3.p_do_qt(System.String,System.Int32)">
+            <summary>
+            其他自定义按钮的serivce 信息操作。
+            </summary>
+            <param name="v_button_flag">按钮标志，比如 F6,F7,F8等。</param>
+            <param name="show_flag"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF3.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF3.FormGCPMSIF3_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF3.FormGCPMSIF3_EF_START_FORM_BY_EP(System.Object,EF.EF_Args)">
+            <summary>
+            由菜单打开本画面。
+            </summary>
+            <param name="sender"></param>
+            <param name="i_args"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF3.FormGCPMSIF3_EF_PRE_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF3.FormGCPMSIF3_EF_PRE_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF3.FormGCPMSIF3_EF_CANCEL_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF3.FormGCPMSIF3_EF_CANCEL_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF3.FormGCPMSIF3_EF_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF3.FormGCPMSIF3_EF_DO_F5(System.Object,EF.EF_Args)">
+            <summary>
+            删除
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF3.FormGCPMSIF3_EF_DO_F7(System.Object,EF.EF_Args)">
+            <summary>
+             //履历查询画面，弹出。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF3.FormGCPMSIF3_EF_DO_F6(System.Object,EF.EF_Args)">
+            <summary>
+            其他业务功能，比如’计划释放’ 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF3.FormGCPMSIF3_EF_DO_F8(System.Object,EF.EF_Args)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF3.FormGCPMSIF3_EF_DO_FC(System.Object,EF.EF_Args)">
+            <summary>
+            履历查询画面，弹出。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF3.gridView1_FocusedRowChanged(System.Object,DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs)">
+            <summary>
+            当前行发生变化的时候。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMSIF3.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF3.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMSIF3.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF2PG.p_query2(System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF2PG.FormGCPMSIF2PG_EF_START_FORM_BY_EP(System.Object,EF.EF_Args)">
+            <summary>
+            子母画面配置参数，传入点。。
+            </summary>
+            <param name="sender"></param>
+            <param name="i_args"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2PG.FormGCPMSIF2PG_EF_DO_F9(System.Object,EF.EF_Args)">
+            <summary>
+            查询结果预览，可导出成XLS.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMSIF2PG.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF2PG.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2PG.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.p_query22(System.Int32,System.Int32,EF.EFDevGrid,System.Int32)">
+            <summary>
+            分页查询模式_函数
+            </summary>
+            <param name="recordFrom">开始记录序号</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="efGrid_now">指定GRID</param>
+            <param name="show_flag">显示提示信息标志= 0/1=</param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.p_do_qt(System.String,System.Int32)">
+            <summary>
+            其他自定义按钮的serivce 信息操作。
+            </summary>
+            <param name="v_button_flag">按钮标志，比如 F6,F7,F8等。</param>
+            <param name="show_flag"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.FormGCPMSIF2M_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.FormGCPMSIF2M_EF_START_FORM_BY_EP(System.Object,EF.EF_Args)">
+            <summary>
+            由菜单打开本画面。
+            </summary>
+            <param name="sender"></param>
+            <param name="i_args"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.FormGCPMSIF2M_EF_PRE_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.FormGCPMSIF2M_EF_PRE_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.FormGCPMSIF2M_EF_CANCEL_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.FormGCPMSIF2M_EF_CANCEL_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.FormGCPMSIF2M_EF_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.FormGCPMSIF2M_EF_DO_F5(System.Object,EF.EF_Args)">
+            <summary>
+            删除
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.FormGCPMSIF2M_EF_DO_F7(System.Object,EF.EF_Args)">
+            <summary>
+             //履历查询画面，弹出。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.FormGCPMSIF2M_EF_DO_F6(System.Object,EF.EF_Args)">
+            <summary>
+            其他业务功能，比如’计划释放’ 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.FormGCPMSIF2M_EF_DO_F8(System.Object,EF.EF_Args)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.FormGCPMSIF2M_EF_DO_FC(System.Object,EF.EF_Args)">
+            <summary>
+            履历查询画面，弹出。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.efDevGrid1_EF_GridBar_First_Event(System.Object,DevExpress.XtraEditors.NavigatorButtonClickEventArgs)">
+            <summary>
+            第一页
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.efDevGrid1_EF_GridBar_Last_Event(System.Object,DevExpress.XtraEditors.NavigatorButtonClickEventArgs)">
+            <summary>
+            最后一页
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.efDevGrid1_EF_GridBar_PrePage_Event(System.Object,DevExpress.XtraEditors.NavigatorButtonClickEventArgs)">
+            <summary>
+            上一页
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.efDevGrid1_EF_GridBar_NextPage_Event(System.Object,DevExpress.XtraEditors.NavigatorButtonClickEventArgs)">
+            <summary>
+            下一页
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.efDevGrid1_EF_GridBar_PageTo_Event(System.Object,EF.EFDevGrid.EFNavigatorButtonClickEventArgs)">
+            <summary>
+            跳转到指定页。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMSIF2M.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2M.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF2.p_do_qt(System.String,System.Int32)">
+            <summary>
+            其他自定义按钮的serivce 信息操作。
+            </summary>
+            <param name="v_button_flag">按钮标志，比如 F6,F7,F8等。</param>
+            <param name="show_flag"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF2.FormGCPMSIF2_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2.FormGCPMSIF2_EF_START_FORM_BY_EP(System.Object,EF.EF_Args)">
+            <summary>
+            由菜单打开本画面。
+            </summary>
+            <param name="sender"></param>
+            <param name="i_args"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2.FormGCPMSIF2_EF_PRE_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2.FormGCPMSIF2_EF_PRE_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2.FormGCPMSIF2_EF_CANCEL_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2.FormGCPMSIF2_EF_CANCEL_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2.FormGCPMSIF2_EF_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2.FormGCPMSIF2_EF_DO_F5(System.Object,EF.EF_Args)">
+            <summary>
+            删除
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2.FormGCPMSIF2_EF_DO_F7(System.Object,EF.EF_Args)">
+            <summary>
+             //履历查询画面，弹出。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2.FormGCPMSIF2_EF_DO_F6(System.Object,EF.EF_Args)">
+            <summary>
+            其他业务功能，比如’计划释放’ 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2.FormGCPMSIF2_EF_DO_F8(System.Object,EF.EF_Args)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2.FormGCPMSIF2_EF_DO_FC(System.Object,EF.EF_Args)">
+            <summary>
+            履历查询画面，弹出。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMSIF2.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF2.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMSIF2.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF.p_do_qt(System.String,System.Int32)">
+            <summary>
+            其他自定义按钮的serivce 信息操作。
+            </summary>
+            <param name="v_button_flag">按钮标志，比如 F6,F7,F8等。</param>
+            <param name="show_flag"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF.FormGCPMSIF_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            记录新增。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF.gridView1_ShowingEditor(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            grid编辑事件
+            <para>对于未选中的行，不可进入编辑模式</para>
+            <para>设置哪些单元格可以进入编辑模式</para>
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF.FormGCPMSIF_EF_DO_FC(System.Object,EF.EF_Args)">
+            <summary>
+            业务履历查询。。。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF.FormGCPMSIF_EF_DO_F6(System.Object,EF.EF_Args)">
+            <summary>
+            F6-自定义按钮。。。。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF.FormGCPMSIF_EF_DO_F7(System.Object,EF.EF_Args)">
+            <summary>
+            F7-自定义按钮。。。。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF.layoutControlGroup2_DoubleClick(System.Object,System.EventArgs)">
+            <summary>
+            显示ED54功能号+跳转到画面 EPED54
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIF.layoutControlGroup2_Click(System.Object,System.EventArgs)">
+            <summary>
+            显示ED54功能号
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMSIF.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIF.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMSIF.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ2EPG.p_query2(System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ2EPG.FormGCPMZ2EPG_EF_START_FORM_BY_EP(System.Object,EF.EF_Args)">
+            <summary>
+            子母画面配置参数，传入点。。
+            </summary>
+            <param name="sender"></param>
+            <param name="i_args"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ2EPG.FormGCPMZ2EPG_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            查询结果预览，可导出成XLS.
+            类似报表功能了。。。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMZ2EPG.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ2EPG.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMZ2EPG.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMDM01.p_doButton_show(EF.EFDevGrid,System.String)">
+            <summary>
+            显示维护小按钮， 设置可编辑列
+            </summary>
+            <param name="efGrid_now"></param>
+            <param name="v_func_id"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.p_doButton_hide(EF.EFDevGrid)">
+            <summary>
+            隐藏维护按钮。
+            </summary>
+            <param name="efGrid_now"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.p_do_table(EF.EFDevGrid,System.String)">
+            <summary>
+            根据指定TABLE_NAME ,进行‘新增、修改、删除’的维护功能。
+            约定： 
+            service_name = pmof21_do
+            BLK名称 = PMOF21_INS,PMOF21_UPD,PMOF21_DEL
+            </summary>
+            <param name="efGrid_now"></param>
+            <param name="v_table_name"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.p_do_all_cancel(System.Int32,System.String)">
+            <summary>
+            业务操作_取消处理。
+            </summary>
+            <param name="show_flag"></param>
+            <param name="v_do_type"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.p_do_all_pre(System.Int32,System.String)">
+            <summary>
+            业务操作_预处理。
+            </summary>
+            <param name="show_flag"></param>
+            <param name="v_do_type">ins/upd/del=新增/修改/删除</param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.p_do_all(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="efGrid_now"></param>
+            <param name="show_flag"></param>
+            <param name="v_do_type">ins新增/upd修改/del删除</param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.p_query_dm02(EF.EFDevGrid,System.String,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            获取系统代码【项目】信息。
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMDM01.p_query_dm03(EF.EFDevGrid,System.String,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            获取系统代码【明细】信息。
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMDM01.p_query_tj(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数--统计信息
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMDM01.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            代码主信息查询。。。
+            </summary>
+            <param name="efGrid_now"></param>
+            <param name="show_flag"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.FormGCPMDM01_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            代码主信息维护
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.FormGCPMDM01_EF_START_FORM_BY_EP(System.Object,EF.EF_Args)">
+            <summary>
+            由菜单打开本画面。
+            </summary>
+            <param name="sender"></param>
+            <param name="i_args"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.FormGCPMDM01_EF_PRE_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.FormGCPMDM01_EF_PRE_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            代码项目维护-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.FormGCPMDM01_EF_CANCEL_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            代码主信息维护_取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.FormGCPMDM01_EF_CANCEL_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            代码项目维护-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.FormGCPMDM01_EF_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            代码项目维护
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.FormGCPMDM01_EF_DO_F5(System.Object,EF.EF_Args)">
+            <summary>
+            代码明细信息_维护
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.FormGCPMDM01_EF_DO_F7(System.Object,EF.EF_Args)">
+            <summary>
+             //履历查询画面，弹出。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.FormGCPMDM01_EF_DO_F6(System.Object,EF.EF_Args)">
+            <summary>
+            复制功能。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.FormGCPMDM01_EF_DO_F8(System.Object,EF.EF_Args)">
+            <summary>
+            统计查询
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.efDevGrid1_DoubleClick(System.Object,System.EventArgs)">
+            <summary>
+            系统代码主信息的双击。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.gridView1_FocusedRowChanged(System.Object,DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs)">
+            <summary>
+            根据当前行的‘值集代码’，获取对应的值集信息。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.gridView2_FocusedRowChanged(System.Object,DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs)">
+            <summary>
+            /// 根据当前行的‘值集代码’，获取对应的值集信息。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.FormGCPMDM01_EF_DO_F9(System.Object,EF.EF_Args)">
+            <summary>
+            报表导出。。。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.FormGCPMDM01_EF_PRE_DO_F5(System.Object,EF.EF_Args)">
+            <summary>
+            代码明细维护_预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.FormGCPMDM01_EF_CANCEL_DO_F5(System.Object,EF.EF_Args)">
+            <summary>
+            代码明细维护-取消处理。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMDM01.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMDM01.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMDM01.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMA2.p_query_tj(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数--统计信息
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMA2.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMA2.FormGCPMA2_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMA2.FormGCPMA2_EF_START_FORM_BY_EP(System.Object,EF.EF_Args)">
+            <summary>
+            由菜单打开本画面。
+            </summary>
+            <param name="sender"></param>
+            <param name="i_args"></param>
+        </member>
+        <member name="M:GC.FormGCPMA2.FormGCPMA2_EF_PRE_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMA2.FormGCPMA2_EF_PRE_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMA2.FormGCPMA2_EF_CANCEL_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMA2.FormGCPMA2_EF_CANCEL_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMA2.FormGCPMA2_EF_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMA2.FormGCPMA2_EF_DO_F5(System.Object,EF.EF_Args)">
+            <summary>
+            删除
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMA2.FormGCPMA2_EF_DO_F7(System.Object,EF.EF_Args)">
+            <summary>
+             //履历查询画面，弹出。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMA2.FormGCPMA2_EF_DO_F6(System.Object,EF.EF_Args)">
+            <summary>
+            其他业务功能， 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMA2.FormGCPMA2_EF_DO_F8(System.Object,EF.EF_Args)">
+            <summary>
+            统计查询，需要重新初始化GRID的列信息。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMA2.gridView_tj_EndGrouping(System.Object,System.EventArgs)">
+            <summary>
+            根据分组信息，刷新CHART
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMA2.RefreshGraph(System.String,System.String,System.Data.DataTable)">
+            <summary>
+            根据当前分组信息，刷新图形。
+            </summary>
+            <param name="col"></param>
+            <param name="dt"></param>
+        </member>
+        <member name="F:GC.FormGCPMA2.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMA2.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMA2.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMEP01.p_doButton_show(EF.EFDevGrid,System.String)">
+            <summary>
+            显示维护小按钮， 设置可编辑列
+            </summary>
+            <param name="efGrid_now"></param>
+            <param name="v_func_id"></param>
+        </member>
+        <member name="M:GC.FormGCPMEP01.p_doButton_hide(EF.EFDevGrid)">
+            <summary>
+            隐藏维护按钮。
+            </summary>
+            <param name="efGrid_now"></param>
+        </member>
+        <member name="M:GC.FormGCPMEP01.p_do_table(EF.EFDevGrid,System.String)">
+            <summary>
+            根据指定TABLE_NAME ,进行‘新增、修改、删除’的维护功能。
+            约定： 
+            service_name = gcpmep01_do, gcpmep02_do
+            BLK名称 = GCPMEP01_INS,GCPMEP01_UPD,GCPMEP01_DEL
+            </summary>
+            <param name="efGrid_now"></param>
+            <param name="v_table_name">GCPMEP01，GCPMEP02</param>
+        </member>
+        <member name="M:GC.FormGCPMEP01.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            根据指定的grid,表名称，查询信息。
+            </summary>
+            <param name="efGrid_now"></param> 
+            <param name="show_flag"></param>
+        </member>
+        <member name="M:GC.FormGCPMEP01.p_query_mx(EF.EFDevGrid,System.String,System.Int32)">
+            <summary>
+            代码明细查询。
+            </summary>
+            <param name="efGrid_now"></param>
+            <param name="v_code_class"></param>
+            <param name="show_flag"></param>
+        </member>
+        <member name="M:GC.FormGCPMEP01.FormGCPMEP01_EF_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            明细信息_维护
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMEP01.FormGCPMEP01_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            GCPMEP01--主信息_维护
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMEP01.FormGCPMEP01_EF_PRE_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            主信息维护_预操作。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMEP01.FormGCPMEP01_EF_PRE_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            明细信息维护_预操作。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMEP01.FormGCPMEP01_EF_CANCEL_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            主信息维护_取消操作。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMEP01.FormGCPMEP01_EF_CANCEL_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            明细信息维护_取消操作。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMEP01.FormGCPMEP01_EF_DO_F5(System.Object,EF.EF_Args)">
+            <summary>
+            同步到 GCPMSI00表。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMEP01.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMEP01.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMEP01.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMRPT.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMRPT.FormGCPMRPT_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            报表打印。。。。。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMRPT.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMRPT.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMRPT.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ6E.p_do_all(EF.EFDevGrid,System.Int32)">
+            <summary>
+            根据代码控制，执行不同业务，调用对应SERVICE 
+            </summary>
+            <param name="efGrid_now"></param>
+            <param name="show_flag"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ6E.p_query_mx(EF.EFDevGrid,System.String,System.String,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ6E.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ6E.FormGCPMZ6E_EF_DO_F2(System.Object,EF.EF_Args)">
+            <summary>
+            非分页模式。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ6E.FormGCPMZ6E_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ6E.FormGCPMZ6E_EF_PRE_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ6E.FormGCPMZ6E_EF_PRE_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ6E.FormGCPMZ6E_EF_CANCEL_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ6E.FormGCPMZ6E_EF_CANCEL_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ6E.FormGCPMZ6E_EF_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ6E.FormGCPMZ6E_EF_DO_F5(System.Object,EF.EF_Args)">
+            <summary>
+             导出删除脚本到XLS
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ6E.efDevGrid_main_DoubleClick(System.Object,System.EventArgs)">
+            <summary>
+            双击GRID ，刷新子GRID信息。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMZ6E.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ6E.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMZ6E.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSI01.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSI01.FormGCPMSI01_EF_DO_F2(System.Object,EF.EF_Args)">
+            <summary>
+            非分页模式。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI01.FormGCPMSI01_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI01.FormGCPMSI01_EF_PRE_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI01.FormGCPMSI01_EF_PRE_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI01.FormGCPMSI01_EF_CANCEL_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI01.FormGCPMSI01_EF_CANCEL_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI01.FormGCPMSI01_EF_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI01.FormGCPMSI01_EF_DO_F5(System.Object,EF.EF_Args)">
+            <summary>
+            删除
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI01.FormGCPMSI01_EF_DO_FC(System.Object,EF.EF_Args)">
+            <summary>
+            跳转到操作履历画面。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI01.p_query_help(System.Int32)">
+            <summary>
+            帮助说明信息。
+            </summary>
+            <param name="show_flag"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI01.layoutControlGroup_q_DoubleClick(System.Object,System.EventArgs)">
+            <summary>
+            显示提示信息。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI01.gridView1_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            双击cell
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMSI01.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSI01.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMSI01.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIE4.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIE4.FormGCPMSIE4_EF_DO_F2(System.Object,EF.EF_Args)">
+            <summary>
+            信息查询。。。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE4.FormGCPMSIE4_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE4.FormGCPMSIE4_EF_START_FORM_BY_EP(System.Object,EF.EF_Args)">
+            <summary>
+            由菜单打开本画面。
+            </summary>
+            <param name="sender"></param>
+            <param name="i_args"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE4.FormGCPMSIE4_EF_PRE_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE4.FormGCPMSIE4_EF_PRE_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE4.FormGCPMSIE4_EF_CANCEL_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE4.FormGCPMSIE4_EF_CANCEL_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE4.FormGCPMSIE4_EF_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE4.FormGCPMSIE4_EF_DO_F5(System.Object,EF.EF_Args)">
+            <summary>
+            删除
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE4.FormGCPMSIE4_EF_DO_F7(System.Object,EF.EF_Args)">
+            <summary>
+              
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE4.FormGCPMSIE4_EF_DO_F6(System.Object,EF.EF_Args)">
+            <summary>
+            其他业务功能，比如’计划释放’ 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE4.FormGCPMSIE4_EF_DO_F8(System.Object,EF.EF_Args)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE4.FormGCPMSIE4_EF_DO_FC(System.Object,EF.EF_Args)">
+            <summary>
+            履历查询画面，弹出。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMSIE4.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIE4.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMSIE4.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSI00INQ.p_query2(EF.EFDevGrid,System.Int32,System.Int32)">
+            <summary>
+            //非分页模式的查询
+            </summary>
+            <param name="efGrid_now"></param>
+            <param name="show_flag">1=显示提示</param>
+            <param name="row_num">0/1=[低/高]数据量</param>
+        </member>
+        <member name="M:GC.FormGCPMSI00INQ.FormGCPMSI00INQ_EF_DO_F2(System.Object,EF.EF_Args)">
+            <summary>
+            小数据量-查询
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSI00INQ.FormGCPMSI00INQ_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            大数据量-查询。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMSI00INQ.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSI00INQ.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMSI00INQ.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ5E.p_query2_ed54(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ5E.p_query2_ed53(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="F:GC.FormGCPMZ5E.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ5E.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMZ5E.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ1E.p_pmofz1_sx(EF.EFDevGrid,System.Int32)">
+            <summary>
+            失效的【画面+按钮】的信息提醒。
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ1E.p_pmofz1_init(EF.EFDevGrid,System.Int32)">
+            <summary>
+            画面+按钮明细信息初始化。
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ1E.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ1E.FormGCPMZ1E_EF_PRE_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-预操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ1E.FormGCPMZ1E_EF_DO_F7(System.Object,EF.EF_Args)">
+            <summary>
+            后台程序新增。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ1E.FormGCPMZ1E_EF_DO_F8(System.Object,EF.EF_Args)">
+            <summary>
+            批量状态修改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ1E.FormGCPMZ1E_EF_DO_FC(System.Object,EF.EF_Args)">
+            <summary>
+            功能统计-画面跳转
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMZ1E.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ1E.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMZ1E.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ2E.p_do_all(EF.EFDevGrid,System.Int32)">
+            <summary>
+            根据代码控制，执行不同业务，调用对应SERVICE
+            后台【配置+关联编译】信息全部删除。
+            TEA01,TEA03,===后台程序基本信息表。
+            TEA05,TEA07==关联编译信息表。
+            </summary>
+            <param name="efGrid_now"></param>
+            <param name="show_flag"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ2E.p_query_lookupedit(EF.EFDevGrid,System.String,System.String)">
+            <summary>
+            将GRID 中指定列，进行下拉列表模式的显示。
+            </summary>
+            <param name="efGrid_now">指定的GRID</param>
+            <param name="v_item_ename">显示成下拉列表模式的列</param>
+            <param name="v_sql">查询语句的SQL</param>       
+        </member>
+        <member name="M:GC.FormGCPMZ2E.p_query_all(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数[各类查询模式]
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ2E.p_query_gnx2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            VSTS功能项_查询_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ2E.p_query_gnx(EF.EFDevGrid,System.Int32)">
+            <summary>
+            VSTS功能项_查询_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ2E.p_help_word(System.Int32)">
+            <summary>
+            根据画面清单，生成对应的在线帮助格式的WORD文档。
+            </summary>
+            <param name="show_flag"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ2E.p_gen_xls(System.Int32,EI.EIInfo)">
+            <summary>
+            生产XLS 文档
+            </summary>
+            <param name="show_flag"></param>
+            <param name="outBlock"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ2E.p_gen_word(System.Int32,EI.EIInfo)">
+            <summary>
+            根据选择的信息，创建对应的WORD文档信息[表格形式]
+            </summary>
+            <param name="show_flag"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ2E.p_query_server(EF.EFDevGrid,System.Int32)">
+            <summary>
+            后台程序清单。
+            </summary>
+            <param name="efGrid_now"></param>
+            <param name="show_flag"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ2E.p_query_form(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            画面清单的查询。
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ2E.FormGCPMZ2E_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            给指定画面，新增'F0'功能键。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ2E.FormGCPMZ2E_EF_DO_FB(System.Object,EF.EF_Args)">
+            <summary>
+            在线帮助文档格式-WORD生成。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ2E.FormGCPMZ2E_EF_DO_FC(System.Object,EF.EF_Args)">
+            <summary>
+            根据选中行，生成XLS文档。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ2E.FormGCPMZ2E_EF_DO_FA(System.Object,EF.EF_Args)">
+            <summary>
+            根据画面清单，同步到tea08表信息。
+            根据功能清单, 从TEA08同步信息到TGCPMZ1----2015-10-11 16:05:27
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMZ2E.gridView1_FocusedRowChanged(System.Object,DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs)">
+            <summary>
+            当前行发生变化。。。。。。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMZ2E.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMZ2E.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMZ2E.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIE.p_do_qt(System.String,System.Int32)">
+            <summary>
+            其他自定义按钮的serivce 信息操作。
+            </summary>
+            <param name="v_button_flag">按钮标志，比如 F6,F7,F8等。</param>
+            <param name="show_flag"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIE.gridView1_ShowingEditor(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            grid编辑事件
+            <para>对于未选中的行，不可进入编辑模式</para>
+            <para>设置哪些单元格可以进入编辑模式</para>
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIE.FormGCPMSIE_EF_DO_FC(System.Object,EF.EF_Args)">
+            <summary>
+            业务履历查询。。。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMSIE.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIE.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMSIE.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSI99C.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSI99C.FormGCPMSI99C_EF_DO_F5(System.Object,EF.EF_Args)">
+            <summary>
+            信息的删除。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMSI99C.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSI99C.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMSI99C.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIE2.p_do_qt(System.String,System.Int32)">
+            <summary>
+            其他自定义按钮的serivce 信息操作。
+            </summary>
+            <param name="v_button_flag">按钮标志，比如 F6,F7,F8等。</param>
+            <param name="show_flag"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE2.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIE2.FormGCPMSIE2_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE2.FormGCPMSIE2_EF_START_FORM_BY_EP(System.Object,EF.EF_Args)">
+            <summary>
+            由菜单打开本画面。
+            </summary>
+            <param name="sender"></param>
+            <param name="i_args"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE2.FormGCPMSIE2_EF_PRE_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE2.FormGCPMSIE2_EF_PRE_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-预处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE2.FormGCPMSIE2_EF_CANCEL_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            新增-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE2.FormGCPMSIE2_EF_CANCEL_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改-取消操作
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE2.FormGCPMSIE2_EF_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            修改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE2.FormGCPMSIE2_EF_DO_F5(System.Object,EF.EF_Args)">
+            <summary>
+            删除
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE2.FormGCPMSIE2_EF_DO_F7(System.Object,EF.EF_Args)">
+            <summary>
+             //履历查询画面，弹出。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE2.FormGCPMSIE2_EF_DO_F6(System.Object,EF.EF_Args)">
+            <summary>
+            其他业务功能，比如’计划释放’ 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE2.FormGCPMSIE2_EF_DO_F8(System.Object,EF.EF_Args)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMSIE2.FormGCPMSIE2_EF_DO_FC(System.Object,EF.EF_Args)">
+            <summary>
+            履历查询画面，弹出。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMSIE2.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMSIE2.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMSIE2.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMTEL.p_query2(EF.EFDevGrid,System.Int32)">
+            <summary>
+            非分页查询模式_函数
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMTEL.FormGCPMTEL_EF_DO_F3(System.Object,EF.EF_Args)">
+            <summary>
+            信息新增。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMTEL.FormGCPMTEL_EF_DO_F4(System.Object,EF.EF_Args)">
+            <summary>
+            信息修改。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMTEL.FormGCPMTEL_EF_DO_F5(System.Object,EF.EF_Args)">
+            <summary>
+            信息删除。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMTEL.gridView1_ShowingEditor(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            grid编辑事件
+            <para>对于未选中的行，不可进入编辑模式</para>
+            <para>设置哪些单元格可以进入编辑模式</para>
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMTEL.efTreeView1_AfterSelect(System.Object,System.Windows.Forms.TreeViewEventArgs)">
+            <summary>
+            树中节点的选中事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMTEL.FormGCPMTEL_EF_DO_FC(System.Object,EF.EF_Args)">
+            <summary>
+            业务履历查询。。。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMTEL.FormGCPMTEL_EF_DO_F6(System.Object,EF.EF_Args)">
+            <summary>
+            F6-自定义按钮。。。。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMTEL.FormGCPMTEL_EF_DO_F7(System.Object,EF.EF_Args)">
+            <summary>
+            F7-自定义按钮。。。。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMTEL.FormGCPMTEL_EF_DO_F9(System.Object,EF.EF_Args)">
+            <summary>
+            数据失效。。。并生成最新的VIEW.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.FormGCPMTEL.FormGCPMTEL_EF_DO_FA(System.Object,EF.EF_Args)">
+            <summary>
+            数据生效。。。并生成对应的VIEW 信息。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GC.FormGCPMTEL.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GC.FormGCPMTEL.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GC.FormGCPMTEL.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GC.PMStaticTool">
+            <summary>
+            PM用的公共静态方法集
+            创建者：陈添
+            调用形式：Tonix + 扩展方法名
+            </summary>
+        </member>
+        <member name="M:GC.PMStaticTool.TonixAddBandsAndColumns(DevExpress.XtraGrid.Views.BandedGrid.BandedGridView,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            BandedGrid子母列新增
+            </summary>
+            <param name="bandedGridView">当前的BandedGridView</param>
+            <param name="topBandName">母列名称</param>
+            <param name="subBandName">子列名称列表</param>
+        </member>
+        <member name="M:GC.PMStaticTool.TonixGenerateBandedGridView(DevExpress.XtraGrid.Views.BandedGrid.BandedGridView,System.Data.DataTable)">
+            <summary>
+            按结构表生成BandedGridView的视图结构
+            </summary>
+            <param name="bandedGridView">当前的BandedGridView</param>
+            <param name="bandedConstrTable">结构表</param>
+        </member>
+        <member name="M:GC.PMStaticTool.TonixShowOutInfoResult(EI.EIInfo,System.Data.DataSet,EF.EFFormMain)">
+            <summary>
+            简化查询SERVICES执行后输出到前台画面的操作
+            </summary>
+            <param name="outInfo">SERVICE输出DATASET</param>
+            <param name="dataset">要转换为强类型的DATASET</param>
+            <param name="mainForm">当前窗体对象</param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_Init_Form_Pop(EF.EFForm,DevExpress.XtraLayout.LayoutControl)">
+            <summary>
+            设置整个FORM，总LAYOUT的格式信息,设置打开的小画面。
+            </summary>
+            <param name="form_now"></param>
+            <param name="layoutControl_now"></param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_Init_Form(EF.EFForm,DevExpress.XtraLayout.LayoutControl)">
+            <summary>
+            设置整个FORM，总LAYOUT的格式信息。
+            </summary>
+            <param name="form_now"></param>
+            <param name="layoutControl_now"></param>
+        </member>
+        <member name="M:GC.PMUtility.Dev_messageBoxWarning(System.String)">
+            <summary>
+            警告类[提示框],提供【是】【否】按钮。
+            </summary>
+            <param name="v_msg">提示的内容</param>
+            
+        </member>
+        <member name="M:GC.PMUtility.Dev_messageBoxQuestion(System.String)">
+            <summary>
+            问题类[提示框],提供【是】【否】按钮。
+            </summary>
+            <param name="v_msg">提示的内容</param>
+        </member>
+        <member name="M:GC.PMUtility.Dev_messageBoxInfo(System.String)">
+            <summary>
+            提示类[提示框],提供【确认】按钮
+            </summary>
+            <param name="v_msg">提示的内容</param>
+        </member>
+        <member name="M:GC.PMUtility.Dev_messageBoxError(System.String)">
+            <summary>
+            错误类[提示框],提供【确认】按钮
+            </summary>
+            <param name="v_msg">提示的内容</param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_initCol_LookUpEdit(EF.EFDevGrid,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            GRID中的[Column]设置成下拉列表模式==EFX模式[SetPopupGridDataSource]
+            </summary>
+            <param name="efgridNow">GRID控件</param>
+            <param name="col_name">GRID 中需要转换的列名称</param>
+            <param name="service_name">需要显示信息的业务service</param>
+            <param name="para_name">入口参数名称</param>
+            <param name="para_value">入口参数值</param>
+            <param name="out_para">出口参数值1</param>
+            <param name="out_para2">出口参数值2</param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_initCol_LookUpEdit(EF.EFDevGrid,System.String,System.String,System.String)">
+            <summary>
+            grid中的[Column]设置成下拉列表==RepositoryItemLookUpEdit
+            </summary>
+            <param name="efgrid">GRID控件</param>
+            <param name="col_name">GRID 中需要转换的列名称</param>
+            <param name="in_para">service对应的入口参数[多是查询条件]</param>
+            <param name="service_name">显示信息的service</param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_Init_LayoutGroup_ReadOnly(DevExpress.XtraLayout.LayoutControlGroup)">
+            <summary>
+            设置LayoutGroup内部的所有控件的只读属性。
+            </summary>
+            <param name="layoutGroup_now"></param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_Init_Panel_ReadOnly_False(EF.EFPanel)">
+            <summary>
+            设置Panel控件内部的所有控件的只读属性= false。
+            </summary>
+            <param name="panel_now"></param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_Init_Panel_ReadOnly(EF.EFPanel,System.String)">
+            <summary>
+            根据【功能号】，设置Panel控件内部的控件的只读属性= false。
+            </summary>
+            <param name="panel_now"></param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_Init_Panel_ReadOnly(EF.EFPanel)">
+            <summary>
+            设置Panel控件内部的所有控件的只读属性= true。
+            </summary>
+            <param name="panel_now"></param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_Init_LayoutGroup(DevExpress.XtraLayout.LayoutControlGroup)">
+            <summary>
+            设置LayoutGroup的伸缩按钮。
+            </summary>
+            <param name="layoutGroup_now">需要设置按钮的layoutGroup</param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_Init_grid(EF.EFDevGrid)">
+            <summary>
+            GRID 初始化设置：显示复选框列标题，列AutoSize,右键设置，行拖拉设置，提供翻页(first,last,next,prev,跳转页)，导出等GRID自带小按钮功能。
+            </summary>
+            <param name="efGrid_now">需要设置的GRID</param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_Choice_no_grid(EF.EFDevGrid)">
+            <summary>
+            设置GRID中的所有行被选中（全不选）
+            </summary>
+            <param name="efGrid_now">需要操作的GRID</param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_Choice_all_grid(EF.EFDevGrid)">
+            <summary>
+            设置GRID中的所有行被选中（全选）
+            </summary>
+            <param name="efGrid_now">需要操作的GRID</param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_init_LookUpEdit(EF.EFDevLookUpEdit,System.String)">
+            <summary>
+            根据code_class初始化对应的下拉列表信息,读取表tgcpmsi00
+            </summary>
+            <param name="lookupedit_now">DEV的LookUp控件</param>
+            <param name="v_code_class">代码编号</param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_init_LookUpEdit_code(EF.EFDevLookUpEdit,System.String)">
+            <summary>
+            根据code_class初始化对应的下拉列表信息,读取表tgcpmsi00,代码模式。
+            </summary>
+            <param name="lookupedit_now">DEV的LookUp控件</param>
+            <param name="v_code_class">代码编号</param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_init_LookUpEdit_desc(EF.EFDevLookUpEdit,System.String,System.String[])">
+            <summary>
+            根据[code_class]初始化对应的下拉列表信息,并将代码描述显示在指定列中。
+            </summary>
+            <param name="lookupedit_now">DEV的LookUp控件</param>
+            <param name="v_code_class">代码编号</param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_init_LookUpEdit_code(EF.EFDevLookUpEdit,System.String,System.Int32)">
+            <summary>
+            根据[code_class]初始化对应的[N列]的下拉信息, 
+            </summary>
+            <param name="lookupedit_now"></param>
+            <param name="v_code_class"></param>
+            <param name="col_num"></param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_init_LookUpEdit(EF.EFDevLookUpEdit,System.String,System.String)">
+            <summary>
+            根据[service_name]初始化对应的下拉列表信息。
+            </summary>
+            <param name="lookupedit_now">DEV的LookUp控件</param>
+            <param name="in_para">入口参数值</param>
+            <param name="service_name">业务service名称</param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_init_LookUpEdit(EF.EFDevLookUpEdit,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            /根据[service_name]初始化对应的下拉列表信息。
+            </summary>
+            <param name="lookupedit_now">DEV的LookUp控件</param>
+            <param name="service_name">业务service名称</param>
+            <param name="para_name">入口参数名称</param>
+            <param name="para_value">入口参数值</param>
+            <param name="out_para">出口参数值1</param>
+            <param name="out_para2">出口参数值2</param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_ColFixedLeft(EF.EFDevGrid,System.String[])">
+            <summary>
+            将数组中的列信息，靠左冻结
+            </summary>
+            <param name="efgrid">DEVGRID控件</param>
+            <param name="col_name">需要冻结的列数组</param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_SetColEdit_multi(EF.EFDevGrid,System.String[],System.String)">
+            <summary>
+            根据定义的数组信息，进行可编辑列设置。[EFX]方式
+            设置grid某几列的可写性,并修改字体颜色(蓝色+粗体),
+            </summary> 
+            <param name="efgrid">当前GRID</param>
+            <param name="col_name">可编辑的列数组信息</param>
+            <param name="color_num">颜色代码（此代码暂不启用）</param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_SetColEdit_multi2(EF.EFDevGrid,System.String,System.String)">
+            <summary>
+            根据EPED54画面的配置信息,动态设置可编辑性。[EFX]方式
+            设置grid某几列的可写性,并修改字体颜色(蓝色+粗体),
+            </summary> 
+            <param name="efGrid_now">当前GRID</param>
+            <param name="v_function_id">功能号</param>
+            <param name="color_num">颜色代码（此代码暂不启用）</param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_SetColEdit_multi3(EF.EFDevGrid,System.String,System.String)">
+             <summary>
+             根据EPED54画面的配置信息,动态设置可编辑性。
+            设置[单记录]模式的[GRID]某几item的可写性,并修改字体颜色(绿色+粗体),
+             </summary>
+             <param name="efgrid">DEVGRID控件</param>
+             <param name="v_function_id">根据EPED54画面中配置的可编辑列信息</param>
+             <param name="color_num">变色代码（此代码暂不启用）</param>
+        </member>
+        <member name="M:GC.PMUtility.DEV_SetColEdit_multi3(EF.EFDevGrid,System.String[],System.String)">
+            <summary>
+            根据数组变量[],设置[单记录]模式的[GRID]某几item的可写性。
+            </summary>
+            <param name="efGrid_now"></param>
+            <param name="col_name"></param>
+            <param name="color_num"></param>
+        </member>
+        <member name="F:GC.PM_utility2.data">
+            <summary>
+            存储excel数据源
+            </summary>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_AdjustFormWidthAndHeightByGrid(EF.EFDevGrid,EF.EFFormMain)">
+            <summary>
+            根据ED54配置的Grid大小调整画面的高度和宽度
+            前提：GRID为ED54配置
+            </summary>
+            <param name="efGrid_now">Grid名</param>
+            <param name="form_now">画面名</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_AdjustFormMainWidthAndHeightByGrid(EF.EFDevGrid,EF.EFFormMain)">
+            <summary>
+            根据ED54配置的Grid大小调整画面的高度和宽度 EFPopupForm
+            前提：GRID为ED54配置
+            </summary>
+            <param name="efGrid_now">Grid名</param>
+            <param name="form_now">画面名</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_AdjustPopupFormWidthAndHeightByGrid(EF.EFDevGrid,EF.EFPopupForm)">
+            <summary>
+            根据ED54配置的Grid大小调整画面的高度和宽度 DEV_AdjustPopupFormWidthAndHeightByGrid
+            前提：GRID为ED54配置
+            </summary>
+            <param name="efGrid_now">Grid名</param>
+            <param name="form_now">画面名</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_showED54_FormMain(EF.EFFormMain,System.String)">
+            <summary>
+            显示ED54功能号。
+            </summary>
+            <param name="form_now"></param>
+            <param name="v_ED54_func_id"></param>
+        </member>
+        <member name="M:GC.PM_utility2.InitPivotGrid(DevExpress.XtraPivotGrid.PivotGridControl,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            初始化PivotGrid数据源及列    
+            "pg"> PivotGrid控件对象
+            "dt"> 数据源表名，可空（则默认为excel的第一个sheet页名）
+            "rowAreaCols"> y轴的表列名集合，可空
+            "columnAreaCols">x轴的表列名集合，可空
+            "dataAreaCols"> 数据区域的表列名集合，可空
+            "blacklist">黑名单：不展示的表列名，可空
+            </summary>
+        </member>
+        <member name="M:GC.PM_utility2.AddPGColumn(DevExpress.XtraPivotGrid.PivotGridControl,System.String,System.String,DevExpress.XtraPivotGrid.PivotArea,System.String)">
+            <summary>
+            PivotGridControl对象加列
+            </summary>
+            <param name="pg">PivotGridControl对象</param>
+            <param name="columnName">PivotGridControl列名</param>
+            <param name="fieldName">PivotGridControl列对应的数据表列名</param>
+            <param name="area">PivotGridControl列将被放置到的区域</param>
+            <param name="caption">PivotGridControl列显示描述</param>
+        </member>
+        <member name="M:GC.PM_utility2.SetPGColumnSummaryType(DevExpress.XtraPivotGrid.PivotGridControl,System.String,DevExpress.Data.PivotGrid.PivotSummaryType)">
+            <summary>
+            PivotGridControl对象设置某列为总计列
+            </summary>
+            <param name="pg">PivotGridControl对象名</param>
+            <param name="columnName">PivotGridControl列名</param>
+            <param name="type">总计类型</param>
+        </member>
+        <member name="M:GC.PM_utility2.SetPGColumnGroupInterval(DevExpress.XtraPivotGrid.PivotGridControl,System.String,DevExpress.XtraPivotGrid.PivotGroupInterval)">
+            <summary>
+            PivotGridControl对象设置某列为层级列
+            </summary>
+            <param name="pg">PivotGridControl对象名</param>
+            <param name="columnName">PivotGridControl列名</param>
+            <param name="level">层级类型</param>
+        </member>
+        <member name="M:GC.PM_utility2.p_InitPivotGridCol(DevExpress.XtraPivotGrid.PivotGridControl,System.String,System.String)">
+            <summary>
+            根据ED54功能号 ，初始化pGRID的列信息。行分组统计。
+            </summary>
+            <param name="pGrid_now">指定的pGrid表格</param>
+            <param name="v_func_id">ED54功能号，
+            借用ED54中的，主键列=行分组， 主键列+查询列= 行分组</param>
+        </member>
+        <member name="M:GC.PM_utility2.p_SetPivotGridValue(DevExpress.XtraPivotGrid.PivotGridControl,EI.EIInfo)">
+            <summary>
+            对EIInfo对象用PGrid展示。
+            p_SetPivotGridValue
+            </summary>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_gotoED54(EF.EFForm,System.String)">
+            <summary>
+            跳转到ED54画面。
+            </summary>
+            <param name="form_now"></param>
+            <param name="v_ED54_func_id"></param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_show_help2(System.String,System.String,System.String)">
+            <summary>
+            显示画面HELP信息。
+            </summary>
+            <param name="v_form_name"></param>
+            <param name="v_table_name"></param>
+            <param name="v_part_name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_show_help(System.String,System.String)">
+            <summary>
+            显示画面的HELP信息。
+            </summary>
+            <param name="v_form_name"></param>
+            <param name="v_part_name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_get_func_id(System.String,System.String,System.String)">
+            <summary>
+            根据画面代码+GRID名称， 获取对应的ED54功能号。
+            </summary>
+            <param name="v_form_code"></param>
+            <param name="v_grid_name"></param>
+            <param name="v_part_name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Single_SetCol_Color(System.String,System.String,EF.EFForm,EF.EFDevGrid,System.String,System.String,System.String)">
+            <summary>
+            单记录模式下。
+            若指定列的第一行内容=指定值 ，则将ED54中配置成‘主键列’的列标题变色。
+            </summary>
+            <param name="v_col_name_chk">指定列</param>
+            <param name="v_col_value_chk">指定值</param>
+            <param name="form_now"></param>
+            <param name="efGrid_now">指定GRID</param>
+            <param name="v_func_id">ED54功能号</param>
+            <param name="color_num"></param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetCol_Color(EF.EFForm,EF.EFDevGrid,System.String,System.String,System.String)">
+            <summary>
+            根据ED54中的主键列定义，修改字体颜色(绿色+粗体) --多记录模式。
+            </summary>
+            <param name="form_now">指定FROM</param>
+            <param name="efGrid_now">指定GRID</param>
+            <param name="v_func_id">ED54功能号</param>
+            <param name="color_num">颜色数1/其他=红/绿</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetCol_Color_Single(EF.EFForm,EF.EFDevGrid,System.String,System.String,System.String)">
+            <summary>
+            根据ED54中的主键列定义，修改字体颜色(绿色+粗体) --单记录模式。
+            </summary>
+            <param name="form_now">指定FROM</param>
+            <param name="efGrid_now">指定GRID</param>
+            <param name="v_func_id">ED54功能号</param>
+            <param name="color_num">颜色数1/其他=红/绿</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_getCol_str(EF.EFDevGrid,System.String,System.Int32)">
+            <summary>
+            获取指GRID中+指定列+指定行的，单元格内容。
+            </summary>
+            <param name="efgridNow">指定的GRID</param>
+            <param name="col_name">指定列名称</param>
+            <param name="col_value">指定行号</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_setCol_str(EF.EFDevGrid,System.String,System.String)">
+            <summary>
+            将GRID中，设定某个[字符]类型的列字段的[值]
+            </summary>
+            <param name="efgridNow">指定的GRID</param>
+            <param name="col_name">指定列名称</param>
+            <param name="col_value">字符变量</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_gen_xls(EI.EIInfo,System.String)">
+            <summary>
+            将outBlock中的0#BLK内容 ,导出到xls
+            </summary>
+            <param name="outBlock">OutBlock</param>
+            <param name="file_name2">文件名</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_ret_colValue(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            返回指定列的第一行信息。
+            </summary>
+            <param name="service_name"></param>
+            <param name="para_name"></param>
+            <param name="para_value"></param>
+            <param name="out_para"></param>
+            <param name="v_part_name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_ret_outBlock(System.String,System.String,System.String,System.String)">
+            <summary>
+            根据指定的入口参数+service ，返回outBlock信息。
+            </summary>
+            <param name="service_name">指定service 名称</param>
+            <param name="para_name">入口参数名</param>
+            <param name="para_value">入口参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetColEdit_multi5(EF.EFDevGrid,System.String[],System.String[])">
+            <summary>
+            设置[单记录]模式的[GRID]中，部分字段不可编辑，部分字段可编辑。
+            </summary>
+            <param name="efGrid_now"></param>
+            <param name="col_name_unedit">不可编辑列数组</param>
+            <param name="col_name_edit">可编辑列数组</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_setGridValue(EF.EFDevGrid,EI.EIInfo)">
+            <summary>
+            保证指针在刷新后，还在原来的行号,的GRID 中信息的压入。
+            </summary>
+            <param name="efGrid_now">指定GRID</param>
+            <param name="outBlock">要显示在GRID中的BLK信息</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_initCol_mult(EF.EFDevGrid,System.String,System.String,System.String)">
+            <summary>
+            根据指定 GRID +功能号 ，指定格式，初始化功能号下的列信息。
+            </summary>
+            <param name="efgridNow"></param>
+            <param name="v_func_id"></param>
+            <param name="v_item_value"></param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_initCol_str(EF.EFDevGrid,System.String,System.String)">
+            <summary>
+            设定GRID中，某个[字符]类型的列字段的[初始值]
+            </summary>
+            <param name="efgridNow">指定的GRID</param>
+            <param name="col_name">指定列名称</param>
+            <param name="col_value">字符变量</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_initCol_date(EF.EFDevGrid,System.String,System.DateTime)">
+            <summary>
+            设定GRID中，某个[日期]类型的列字段的[初始值]
+            </summary>
+            <param name="efgridNow">指定的GRID</param>
+            <param name="col_name">指定列名称</param>
+            <param name="v_dateTime">时间变量</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetCol_MenoEdit2(EF.EFDevGrid)">
+            <summary>
+            实现GRID 中所有列的多行显示模式。
+            </summary>
+            <param name="efGrid_now">指定GRID</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetCol_MenoEdit(EF.EFDevGrid,System.String,System.String)">
+            <summary>
+            <para>根据ED54功能号，</para>
+            <para>实现GRID中【指定列】的多行显示模式。</para>
+            </summary>
+            <param name="efGrid_now">指定 GRID</param>
+            <param name="v_function_id">ED54功能号</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetMultCol_Percent(EF.EFDevGrid,System.Int32)">
+            <summary>
+            指定列信息显示进度条
+            </summary>
+            <param name="efGrid_now">指定 GRID</param>
+            <param name="v_start_col">开始列序号</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetCol_Percent(EF.EFDevGrid,System.String,System.String,System.String)">
+            <summary>
+             GRID中,指定列信息显示进度条
+            </summary>
+            <param name="efGrid_now">指定的GRID</param>
+            <param name="v_col_name">分子列名称</param>
+            <param name="v_col_name2">分母列名称</param>
+            <param name="v_col_percent">进度条显示的列名称</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_GetMergeColName(System.String,System.String)">
+            <summary>
+            根据ED54功能号，获取对应的要求合并的列信息。
+            </summary>
+            <param name="v_func_id">ED54功能号</param>
+            <returns></returns>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_AllowCellMerge(EF.EFDevGrid,System.String[])">
+            <summary>
+            根据字符数组变量中定义的列信息，进行单元格合并。
+            </summary>
+            <param name="efGrid_now">指定 GRID</param>
+            <param name="col_name">字符数组</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_ChkCellMerge(EF.EFDevGrid,System.String[],DevExpress.XtraGrid.Views.Grid.CellMergeEventArgs)">
+            <summary>
+            <para>根据指定列信息来决定其他允许合并的单元格是否进行合并处理。</para>
+            <para>字符数组中存放是需要行合并的列名称，</para>
+            <para>主导列【数组中的第一列】，行合并的单元格，</para>
+            </summary>
+            <param name="efGrid_now">指定 GRID</param>
+            <param name="merge_col_name">列名称数组</param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SumCell_merge(System.String,System.String,System.Data.DataTable,DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventArgs)">
+             <summary>
+             <para>对于MERGE的列信息进行SUM的特殊处理，</para>
+            <para> 防止MERGE后的数字信息累计量翻倍。</para>
+             </summary>
+             <param name="col_name">合并的基准列名称</param>
+             <param name="col_name_sum">进行SUM的列名称</param>
+             <param name="dataTable1">数据表</param>
+             <param name="e"></param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetCellMergeColor(System.String[],EI.EIInfo)">
+            <summary>
+            （根据主导列【数组中的第一列】，处理组别的颜色标志信息）
+            </summary>
+            <param name="merge_col_name">需要进行行合并的列名称[数组]</param>
+            <param name="outBlock">BLK信息</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_grid_RecordCountMessage_LJ(EF.EFDevGrid,System.Int32,EI.EIInfo)">
+            <summary>
+            <para>GRID的设置【累计】分页显示信息，只有下页小按钮。</para>
+            <para>提示信息风格统一.</para>
+            <para>翻页小按钮变灰处理统一.</para>
+            </summary>
+            <param name="efGrid_now">指定 GRID </param>
+            <param name="i_CurrentPage">当前页序号</param>
+            <param name="outBlock">BLK信息</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_grid_RecordCountMessage(EF.EFDevGrid,System.Int32,EI.EIInfo)">
+            <summary>
+            <para>GRID的设置分页显示信息.</para>
+            <para>提示信息风格统一.</para>
+            <para>翻页小按钮变灰处理统一.</para>
+            </summary>
+            <param name="efGrid_now">指定 GRID </param>
+            <param name="i_CurrentPage">当前页序号</param>
+            <param name="outBlock">BLK信息</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Init_Form_Pop(EF.EFForm,DevExpress.XtraLayout.LayoutControl)">
+            <summary>
+            <para>设置弹出小画面的风格。</para>
+            <para>设置FORM、LAYOUT的</para>
+            <para>位置，尺寸，Padding,Margin等</para>
+            </summary>
+            <param name="form_now">指定FROM</param>
+            <param name="layoutControl_now">LayoutCtrl</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Init_Form(EF.EFForm,DevExpress.XtraLayout.LayoutControl)">
+            <summary>
+            <para>设置非弹出画面的风格。</para>
+            <para>设置FORM、LAYOUT的</para>
+            <para>位置，尺寸，Padding,Margin等。</para>
+            </summary>
+            <param name="form_now">指定FORM</param>
+            <param name="layoutControl_now">LayoutCtrl</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Init_Form2(EF.EFForm,DevExpress.XtraLayout.LayoutControl,DevExpress.XtraLayout.LayoutControlGroup)">
+            <summary>
+            <para>设置FORM的总体风格。</para>
+            <para>设置FORM、LAYOUT的</para>
+            <para>Location，Size，</para>
+            <para>Padding,Margin,Spacing等</para>
+            </summary>
+            <param name="form_now">指定FORM</param>
+            <param name="layoutControl_now">指定Layout</param>
+            <param name="layoutControlGroup_now">指定LayoutGroup</param>
+        </member>
+        <member name="M:GC.PM_utility2.Dev_messageBoxWarning(System.String)">
+            <summary>
+            问题类[提示框],提供【是】【否】按钮。
+            </summary>
+            <param name="v_msg">提示的内容</param>
+            
+        </member>
+        <member name="M:GC.PM_utility2.Dev_messageBoxQuestion(System.String)">
+            <summary>
+            问题类[提示框],提供【是】【否】按钮。
+            </summary>
+            <param name="v_msg">提示的内容</param>
+        </member>
+        <member name="M:GC.PM_utility2.Dev_messageBoxInfo(System.String)">
+            <summary>
+            提示类[提示框],提供【确认】按钮
+            </summary>
+            <param name="v_msg">提示的内容</param>
+        </member>
+        <member name="M:GC.PM_utility2.Dev_messageBoxError(System.String)">
+            <summary>
+            错误类[提示框],提供【确认】按钮
+            </summary>
+            <param name="v_msg">提示的内容</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_initCol_LookUpEdit3(EF.EFDevGrid,System.String,EI.EIInfo,System.String,System.String[],System.String[])">
+            <summary>
+            加载GRID 中的某个字段下拉列表信息。
+            </summary>
+            <param name="efgridNow">指定的GRID </param>
+            <param name="col_name">指定的列</param>
+            <param name="outBlock">外部传入的数据集</param> 
+            <param name="out_para">显示列</param>
+            <param name="out_para2">显示列数组</param>
+            <param name="out_para_title2">显示列标题数组</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_initCol_LookUpEdit2(EF.EFDevGrid,System.String,System.String,System.String,System.String,System.String,System.String[],System.String[],System.String)">
+            <summary>
+            <para>加载GRID 中的某个字段下拉列表信息，</para>
+            <para>下拉情况下显示指定任意多列，</para>
+            <para>当前字段只记录第一列CODE.</para>
+            <para>使用场景： OM00B2C画面中，订货用户的录入。</para>
+            </summary>
+            <param name="efgridNow">指定的GRID </param>
+            <param name="col_name">指定的列</param>
+            <param name="service_name"></param>
+            <param name="para_name">入口参数名称</param>
+            <param name="para_value">入口参数内容</param>
+            <param name="out_para">显示列</param>
+            <param name="out_para2">显示列数组</param>
+            <param name="out_para_title2">显示列标题数组</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_initCol_LookUpEdit(EF.EFDevGrid,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            GRID中的[Column]设置成下拉列表模式==EFX模式[SetPopupGridDataSource]
+            </summary>
+            <param name="efgridNow">GRID控件</param>
+            <param name="col_name">GRID 中需要转换的列名称</param>
+            <param name="service_name">需要显示信息的业务service</param>
+            <param name="para_name">入口参数名称</param>
+            <param name="para_value">入口参数值</param>
+            <param name="out_para">出口参数值1</param>
+            <param name="out_para2">出口参数值2</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_initCol_LookUpEdit_notEped54(EF.EFDevGrid,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            <para>GRID中的[Column]设置成下拉列表模式</para>
+            <para>==非EFX模式[SetPopupGridDataSource]</para>
+            <para>非EPED54配置的GIRD 信息的控制。</para>
+            </summary>
+            <param name="efgridNow">GRID控件</param>
+            <param name="col_name">GRID 中需要转换的列名称</param>
+            <param name="service_name">需要显示信息的业务service</param>
+            <param name="para_name">入口参数名称</param>
+            <param name="para_value">入口参数值</param>
+            <param name="out_para">出口参数值1</param>
+            <param name="out_para2">出口参数值2</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_initCol_LookUpEdit_title(EF.EFDevGrid,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            可设定列标题的GRID 中指定列的下拉列表模式处理。
+            </summary>
+            <param name="efgridNow">GRID</param>
+            <param name="col_name">列名称</param>
+            <param name="service_name">调用的SERVICE</param>
+            <param name="para_name">入口参数名称</param>
+            <param name="para_value">入口参数值</param>
+            <param name="out_para">返回列1</param>
+            <param name="out_para2">返回列2</param>
+            <param name="out_title">返回列标题1</param>
+            <param name="out_title2">返回列标题2</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Init_LayoutGroup_ReadOnly(DevExpress.XtraLayout.LayoutControlGroup)">
+            <summary>
+            设置LayoutGroup内部的所有控件的只读属性。
+            </summary>
+            <param name="layoutGroup_now">指定的LayoutGroup</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Init_Panel_ReadOnly_False(EF.EFPanel)">
+            <summary>
+            设置Panel控件内部的所有控件的只读属性= false。
+            </summary>
+            <param name="panel_now">指定的Panel</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Init_Panel_ReadOnly(EF.EFPanel,System.String,System.String)">
+            <summary>
+            根据ED54功能号，设置Panel控件内部的控件的只读属性= false。
+            </summary>
+            <param name="panel_now">指定的Panel</param>
+            <param name="v_function_id">ED54功能号</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Init_Panel_ReadOnly(EF.EFPanel)">
+            <summary>
+            设置Panel控件内部的所有控件的只读属性= true。
+            </summary>
+            <param name="panel_now">指定的Panel</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Init_LayoutGroup(DevExpress.XtraLayout.LayoutControlGroup)">
+            <summary>
+            <para>用于【非ED54单记录】配置的多控件画面。</para>
+            <para>主要设置LayoutGroup的布局属性：</para>
+            <para> ExpandButton,Spacing,Padding等。</para>
+            <para> 内部控件的列标题控制。</para>
+            <para> 设置日期控件的格式= yyyy-MM-dd</para>
+            </summary>
+            <param name="layoutGroup_now">指定layoutGroup</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Init_LayoutGroup2(DevExpress.XtraLayout.LayoutControlGroup,System.String)">
+            <summary>
+            设置LayoutGroup的伸缩按钮。
+            设置LayoutGroup内部的控件边距等。
+            layoutgroup 的标题
+            </summary>
+            <param name="layoutGroup_now">指定的LayoutControlGroup</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Init_LayoutGroup_where_size(DevExpress.XtraLayout.LayoutControlGroup,EF.EFDevGrid)">
+            <summary>
+            <para>非[POP弹出画面]中的ED54单记录模式的GROUP属性控制。</para>
+            <para>设置【ED54】配置的【单记录模式】的信息。</para>
+            <para>******根据GRID中的尺寸，调整layoutGroup的尺寸。 ******</para>
+            <para>设置LayoutGroup的伸缩按钮。</para>
+            <para>设置LayoutGroup内部的控件边距等。</para>
+            <para>根据GRID中的尺寸，调整layoutGroup的尺寸。</para>
+            <para>适用于本group是查询区域是ED54单记录模式配置</para>
+            </summary>
+            <param name="layoutGroup_now">LayoutControlGroup</param>
+            <param name="efGrid_now">指定GRID</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Init_LayoutGroup_where_size_POP(DevExpress.XtraLayout.LayoutControlGroup,EF.EFDevGrid)">
+            <summary>
+            <para>[POP弹出画面]中的ED54单记录模式的GROUP属性控制。</para>
+            <para>设置LayoutGroup的【ED54】配置的【单记录模式】的信息。</para>
+            <para>******根据GRID中的尺寸，调整layoutGroup的尺寸。 ******</para>
+            <para>设置LayoutGroup的伸缩按钮。</para>
+            <para>设置LayoutGroup内部的控件边距等。</para>
+            <para>根据GRID中的尺寸，调整layoutGroup的尺寸。</para>
+            <para>适用于本group是查询区域是ED54单记录模式配置</para>
+            </summary>
+            <param name="layoutGroup_now">LayoutControlGroup</param>
+            <param name="efGrid_now">指定GRID</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Init_LayoutGroup_where_with_others(DevExpress.XtraLayout.LayoutControlGroup)">
+            <summary>
+            根据旁边的GROUP 的尺寸定义本GROUP 的高度尺寸。
+            设置伸缩按钮,内部的控件边距等。 
+            </summary>
+            <param name="layoutGroup_now">LayoutControlGroup</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Init_grid(EF.EFDevGrid)">
+            <summary>
+            <para>GRID中基本属性初始化。</para>
+            <para>显示复选框列标题，</para>
+            <para>列AutoSize,</para>
+            <para>右键设置，        </para>
+            <para>行拖拉设置，</para>
+            <para>提供翻页(first,last,next,prev,跳转页)，每页记录初始值</para>
+            <para>导出等GRID自带小按钮功能。</para>
+            </summary>
+            <param name="efGrid_now">需要设置的GRID</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Init_BandedGrid(EF.EFDevGrid,System.String,System.String,System.String)">
+            <summary>
+            <para>BandedGrid 的基本属性初始化。</para>
+            <para>显示复选框列标题，</para>
+            <para>列AutoSize,</para>
+            <para>右键设置，        </para>
+            <para>行拖拉设置，</para>
+            <para>提供翻页(first,last,next,prev,跳转页)，每页记录初始值</para>
+            <para>导出等GRID自带小按钮功能。</para>
+            <para>责任者等列，在EPED54配置成[代码描述]类型后，可自动显示[代码+名称]</para>
+            </summary>
+            <param name="efGrid_now">设置的GRID</param>
+            <param name="v_multi_page">是否分页显示的标志[0/1=不分页/分页]</param>
+            <param name="v_check_option">是否显示复选框的标志[0/1=不显示/显示]</param>
+            
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Init_grid_noChoice(EF.EFDevGrid,System.String,System.String)">
+            <summary>
+            <para>GRID中基本属性初始化。【无复选框】模式</para>
+            <para>显示复选框列标题，</para>
+            <para>列AutoSize,</para>
+            <para>右键设置，        </para>
+            <para>行拖拉设置，</para>
+            <para>提供翻页(first,last,next,prev,跳转页)，每页记录初始值</para>
+            <para>导出等GRID自带小按钮功能。</para>
+            <para>责任者等列，在EPED54配置成[代码描述]类型后，可自动显示[代码+名称]</para>
+            </summary>
+            <param name="efGrid_now">设置的GRID</param>
+            <param name="v_multi_page">是否分页显示的标志[0/1=不分页/分页]</param>
+             
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Init_grid2(EF.EFDevGrid,System.String,System.String)">
+            <summary>
+            <para>GRID中基本属性初始化。</para>
+            <para>显示复选框列标题，</para>
+            <para>列AutoSize,</para>
+            <para>右键设置，        </para>
+            <para>行拖拉设置，</para>
+            <para>提供翻页(first,last,next,prev,跳转页)，每页记录初始值</para>
+            <para>导出等GRID自带小按钮功能。</para>
+            <para>责任者等列，在EPED54配置成[代码描述]类型后，可自动显示[代码+名称]</para>
+            </summary>
+            <param name="efGrid_now">设置的GRID</param>
+            <param name="v_multi_page">是否分页显示的标志[0/1=不分页/分页]</param>
+             
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Choice_one_grid(EF.EFDevGrid)">
+            <summary>
+             //再使得当前行唯一被选中。 
+            </summary>
+            <param name="efGrid_now">需要操作的GRID</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Choice_no_grid(EF.EFDevGrid)">
+            <summary>
+            设置GRID中的所有行被选中（全不选）
+            </summary>
+            <param name="efGrid_now">需要操作的GRID</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_Choice_all_grid(EF.EFDevGrid)">
+            <summary>
+            设置GRID中的所有行被选中（全选）
+            </summary>
+            <param name="efGrid_now">需要操作的GRID</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_init_TreeView(EF.EFTreeView,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            TREE控件信息的初始化。
+            </summary>
+            <param name="efTreeView_now">EFTreeView</param>
+            <param name="service_name">后台程序名称</param>
+            <param name="para_name">入口参数</param>
+            <param name="para_value">入口值</param>
+            <param name="out_para">出口参数</param>
+            <param name="out_para2">出口参数2</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_init_LookUpEdit3(EF.EFDevLookUpEdit[],System.String[],System.String)">
+            <summary>
+            <para>多下拉控件初始，</para>
+            <para> 多代码编号，一次调用，提高效率。</para>
+            </summary>
+            <param name="lookupedit_now">多下拉控件</param>
+            <param name="v_code_class">多代码编号</param> 
+            <param name="v_part_name">分区号</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_init_LookUpEdit(EF.EFDevLookUpEdit,System.String,System.String)">
+            <summary>
+             <para>初始化下拉控件</para>
+             <para>下拉控件</para>
+             <para>代码</para>
+            </summary>
+            <param name="lookupedit_now">DEV的下拉控件</param>
+            <param name="v_code_class">代码编号</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_init_LookUpEdit_code(EF.EFDevLookUpEdit,System.String,System.String)">
+            <summary>
+             <para>初始化下拉控件，单列模式</para>
+             <para>下拉控件</para>
+             <para>代码编号</para>
+            </summary>
+            <param name="lookupedit_now">DEV的LookUp控件</param>
+            <param name="v_code_class">代码编号</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_init_LookUpEdit_desc(EF.EFDevLookUpEdit,System.String,System.String[],System.String)">
+            <summary>
+            暂停使用。0引用
+            </summary>
+            <param name="lookupedit_now"></param>
+            <param name="v_code_class"></param>
+            <param name="col_name"></param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_init_LookUpEdit_code(EF.EFDevLookUpEdit,System.String,System.Int32,System.String)">
+            <summary>
+            暂停使用。0引用
+            </summary>
+            <param name="lookupedit_now"></param>
+            <param name="v_code_class"></param>
+            <param name="col_num"></param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_init_LookUpEdit(EF.EFDevLookUpEdit,System.String,System.String,System.String)">
+            <summary>
+             暂停使用。0引用
+            </summary>
+            <param name="lookupedit_now">DEV的LookUp控件</param>
+            <param name="in_para">入口参数值</param>
+            <param name="service_name">业务service名称</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_init_LookUpEdit(EF.EFDevLookUpEdit,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            /根据[service_name]初始化对应的下拉列表信息。
+            </summary>
+            <param name="lookupedit_now">DEV的LookUp控件</param>
+            <param name="service_name">业务service名称</param>
+            <param name="para_name">入口参数名称</param>
+            <param name="para_value">入口参数值</param>
+            <param name="out_para">出口参数值1</param>
+            <param name="out_para2">出口参数值2</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_init_LookUpEdit2(EF.EFDevLookUpEdit,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            <para>根据[service_name]初始化对应的下拉列表信息,</para>
+            <para>并可控制是否新增空行。</para>
+            </summary>
+            <param name="lookupedit_now">DEV的LookUp控件</param>
+            <param name="service_name">业务service名称</param>
+            <param name="para_name">入口参数名称</param>
+            <param name="para_value">入口参数值</param>
+            <param name="out_para">出口参数值1</param>
+            <param name="out_para2">出口参数值2</param>
+            <param name="null_flag">新增空行标志= 0/1=不增空行/新增空行</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_init_LookUpEdit_one3(EF.EFDevLookUpEdit,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            根据service,加载下拉控件[单列模式]
+            </summary>
+            <param name="lookupedit_now">下拉控件</param>
+            <param name="service_name">service名称</param>
+            <param name="para_name">入口参数名称</param>
+            <param name="para_value">入口参数值</param>
+            <param name="out_para">返回信息</param>
+            <param name="null_flag">新增空行标志= 0/1=不增空行/新增空行</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_init_LookUpEdit_one2(EF.EFDevLookUpEdit,EI.EIInfo,System.String,System.String,System.String)">
+            <summary>
+            根据outBlock，加载下拉控件[单列模式]
+            </summary>
+            <param name="lookupedit_now">下拉控件</param>
+            <param name="outBlock">BLK</param>
+            <param name="out_para">返回列名</param>
+            <param name="out_desc">返回列标题</param>
+            <param name="null_flag">新增空行标志= 0/1=不增空行/新增空行</param> 
+        </member>
+        <member name="M:GC.PM_utility2.DEV_init_LookUpEdit_one(EF.EFDevLookUpEdit,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            根据service,加载下拉控件[单列模式]
+            </summary>
+            <param name="lookupedit_now">下拉控件</param>
+            <param name="service_name">service名称</param>
+            <param name="para_name">入口参数名称</param>
+            <param name="para_value">入口参数值</param>
+            <param name="out_para">返回信息</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_init_DevCheckedComboBoxEdit_one(EF.EFDevCheckedComboBoxEdit,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            复选框控件初始化。[单列模式]
+            </summary>
+            <param name="checkedcombobox_now"></param>
+            <param name="service_name"></param>
+            <param name="para_name"></param>
+            <param name="para_value"></param>
+            <param name="out_para"></param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_init_DevCheckedComboBoxEdit(EF.EFDevCheckedComboBoxEdit,System.String,System.String,System.String,System.String,System.String,System.String)">
+             <summary>
+            复选框控件初始化。[双列模式]
+             </summary>
+             <param name="checkedcombobox_now">复选框控件</param>
+             <param name="service_name">后台程序</param>
+             <param name="para_name">入口参数</param>
+             <param name="para_value">入口值</param>
+             <param name="out_para">出口参数</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_BandGrid_ColFixedLeft(EF.EFDevGrid,System.Int32)">
+            <summary>
+            将bandGRID的前N列,左冻结
+            </summary>
+            <param name="efgrid">指定GRID</param>
+            <param name="fix_len">左冻结列数</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_ColFixedLeft(EF.EFDevGrid,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="efgrid"></param>
+            <param name="fix_len"></param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_ColFixedLeft(EF.EFDevGrid,System.String[])">
+            <summary>
+            将GRID中的指定列信息，左冻结
+            </summary>
+            <param name="efgrid">指定GRID</param>
+            <param name="col_name">需要冻结的列数组</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetCol_sum_ToString(EF.EFDevGrid,System.String)">
+            <summary>
+            <para>根据GRID【选中行+指定列】信息进行汇总计算</para>
+            <para>返回的是汇总的字符变量，保留3位小数。</para>
+            </summary>
+            <param name="efGrid_now">指定 GRID</param>
+            <param name="col_name">指定列</param>
+            <returns></returns>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetCol_sum(EF.EFDevGrid,System.String)">
+            <summary>
+            <para>根据GRID【选中行+指定列】信息进行汇总计算</para>
+            <para>返回的是汇总的数字信息。</para>
+            </summary>
+            <param name="efGrid_now">指定GRID </param>
+            <param name="col_name">列名称</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetCol_sum2(EF.EFDevGrid,System.String,System.String)">
+            <summary>
+            <para>根据GRID【选中行】的【指定列*指定列2】信息进行汇总计算,</para>
+            <para>返回的是汇总的数字信息。</para>
+            </summary>
+            <param name="efGrid_now">指定的GRID </param>
+            <param name="col_name">列名</param>
+            <param name="col_name2">列名2</param>
+            <returns></returns>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetColEdit_multi(EF.EFDevGrid,System.String[],System.String)">
+            <summary>
+            <para>根据定义的多列名，进行可编辑列设置。[EFX]方式</para>
+            <para>设置grid某几列的可写性,修改字体颜色(蓝色+粗体)</para>
+            </summary> 
+            <param name="efgrid">指定GRID</param>
+            <param name="col_name">可编辑的列数组信息</param>
+            <param name="color_num">颜色代码（未启用）</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetColEdit_multi(EF.EFForm,EF.EFDevGrid,System.String[],System.String)">
+            <summary>
+            <para>根据定义的数组信息，进行可编辑列设置。[EFX]方式</para>
+            <para>设置grid某几列的可写性,并修改字体颜色(蓝色+粗体)</para>
+            </summary>
+            <param name="form_now">当前FORM</param>
+            <param name="efgrid">当前GRID</param>
+            <param name="col_name">可编辑的列数组信息</param>
+            <param name="color_num">颜色代码（未启用）</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetColEdit_allNot2(EF.EFDevGrid)">
+            <summary>
+            设置所有列不可编辑，除了复选框[2.0版]
+            </summary>
+            <param name="form_now">指定FORM</param>
+            <param name="efGrid_now">指定GRID</param> 
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetColEdit_allNot(EF.EFForm,EF.EFDevGrid)">
+            <summary>
+            设置所有列不可编辑，除了复选框。
+            </summary>
+            <param name="form_now"></param>
+            <param name="efGrid_now"></param> 
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetColEdit_all(EF.EFForm,EF.EFDevGrid)">
+            <summary>
+            设置GRID所有列【可编辑】。 
+            </summary>
+            <param name="form_now">指定FORM</param>
+            <param name="efGrid_now">指定GRID</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetColEdit_multi2(EF.EFForm,EF.EFDevGrid,System.String,System.String,System.String)">
+            <summary>
+            <para>根据EPED54信息,动态设置可编辑性。[EFX]方式</para>
+            <para>设置grid某几列的可写性,并修改字体颜色(蓝色+粗体)</para>
+            </summary>
+            <param name="form_now">当前FORM</param>
+            <param name="efGrid_now">当前GRID</param>
+            <param name="v_function_id">ED54功能号</param>
+            <param name="color_num">颜色代码（未启用）</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetColEdit_multi4(EF.EFDevGrid,System.String,System.String,System.String)">
+            <summary>
+            设置[ED54]模式的[GRID]中列的可写性
+            </summary>
+            <param name="efGrid_now">指定GRID</param>
+            <param name="v_function_id">指定的N个ED54功能号。</param>
+            <param name="color_num">颜色号</param>
+            <param name="v_part_name">分区代码</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetColEdit_multi3(EF.EFDevGrid,System.String,System.String,System.String)">
+            <summary>
+            <para>根据EPED54信息-3.0 </para>
+            <para>设置[单记录]模式的[GRID]中列的可写性</para>
+            <para>并修改字体颜色(绿色+粗体), </para>
+            </summary>
+            <param name="efGrid_now">指定 GRID</param>
+            <param name="v_function_id">ED54功能号</param>
+            <param name="color_num"></param>
+            <param name="v_part_name"></param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetColEdit_multi3(EF.EFDevGrid,System.String[],System.String)">
+            <summary>
+            <para>根据指定字符数组,</para>
+            <para>设置[单记录]模式的[GRID]某几列的【可写】</para>
+            </summary>
+            <param name="efGrid_now">指定GRID</param>
+            <param name="col_name">列名称数组</param>
+            <param name="color_num">颜色代码(未启用)</param>
+        </member>
+        <member name="M:GC.PM_utility2.DEV_SetColUnEdit_multi3(EF.EFDevGrid,System.String[],System.String)">
+            <summary>
+            根据指定字符数组,
+            置[单记录]模式的[GRID]某几列的【不可写】
+            </summary>
+            <param name="efGrid_now"></param>
+            <param name="col_name"></param>
+            <param name="color_num"></param>
+        </member>
+        <member name="M:GC.WordManager.findTextYouWant(System.Object)">
+            <summary>
+            //找到指定文档所在地。
+            </summary>
+            <param name="findText"></param>
+        </member>
+        <member name="M:GC.WordManager.CreatTable(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            在光标当前位置, 添加表格
+            </summary>
+            <param name="rowNum"></param>
+            <param name="cellNum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GC.WordManager.InsertTextMult(EI.EIInfo)">
+            <summary>
+            在光标当前位置，根据outBlock,写信息。
+            </summary>
+            <param name="outBlock"></param>
+        </member>
+        <member name="M:GC.WordManager.InsertTextByFont(EI.EIInfo)">
+            <summary>
+            在光标当前位置，根据要求的字体格式写入信息
+            </summary>
+            <param name="outBlock"></param>
+        </member>
+        <member name="M:GC.WordManager.InsertTextSingle(System.String,System.Int32)">
+            <summary>
+            在光标当前位置，写单行信息+换行符。
+            </summary>
+            <param name="outBlock"></param>
+        </member>
+        <member name="M:GC.WordManager.InsertNewLine">
+            <summary>
+            在当前位置新增一个换行符
+            </summary> 
+        </member>
+        <member name="M:GC.WordManager.SetBookMarkValue(EI.EIInfo,System.Int32,System.Int32)">
+            <summary>
+            获取书签的位置，并且插入内容
+            </summary>
+            <param name="outBlock">输出的类变量</param>
+            <param name="bookIndexMax">书签个数</param>
+            <param name="blk_num">块号</param>
+        </member>
+        <member name="M:GC.WordManager.SetWordTitle_by_table(EI.EIInfo,System.Object)">
+            <summary>
+            根据table中维护的数据信息，在指定文档位置,进行文档标题信息的处理
+            </summary>
+            <param name="outBlock"></param>
+            <param name="findText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GC.WordManager.SetTableInfo_by_table2(Word.Table,EI.EIInfo,System.Int32,System.String)">
+            <summary>
+            根据数据库的内容，动态设定测试用例表格内容
+            </summary>
+            <param name="v_tb"></param>
+            <param name="outBlock"></param>
+            <param name="title_flg">标题行标志</param>
+            <returns></returns>
+        </member>
+        <member name="T:GC.WordObject">
+            <summary>
+            WordObject 的摘要说明
+            </summary>
+        </member>
+        <member name="M:GC.WordObject.#ctor(System.Int32)">
+            <summary>
+            创建一个新的word文档,可控制页面设置。
+            //横向、纵向的页面设置 =0/1=横向/纵向。
+            </summary>
+        </member>
+        <member name="M:GC.WordObject.#ctor">
+            <summary>
+            创建一个新的word文档
+            </summary>
+        </member>
+        <member name="M:GC.WordObject.#ctor(System.String)">
+            <summary>
+            打开指定的文件。(模板文件)
+            </summary>
+            <param name="FileName">文件名称</param>
+        </member>
+        <member name="M:GC.WordObject.MergeColumn(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            合并列
+            </summary>
+            <param name="table_no">表号</param>
+            <param name="rowNum">行号</param>
+            <param name="column">列号</param>
+            <param name="endNum">合并列数</param>
+        </member>
+        <member name="M:GC.WordObject.MergeRow(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            合并行
+            </summary>
+            <param name="table_no">表号</param>
+            <param name="rowNum">行号</param>
+            <param name="column">列号</param>
+            <param name="endNum">合并行数</param>
+        </member>
+        <member name="M:GC.WordObject.DeleteDocumentText(Word.Document,System.Object,System.Object,System.Object,System.Object)">
+            <summary>
+            清空文档内容
+            </summary>
+            <param name="thisDocument"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="unit"></param>
+            <param name="count"></param>
+        </member>
+        <member name="M:GC.WordObject.InsertString(Word.Range,System.String,System.String)">
+            <summary>
+            插入文字
+            </summary>
+            <param name="rng">插入位置</param>
+            <param name="strTitle">文字内容</param>
+            <param name="fontName">字体大小</param>
+        </member>
+        <member name="M:GC.WordObject.SetStringStyle(Word.Range,Word.WdParagraphAlignment,System.Int32)">
+            <summary>
+            设置文字风格
+            </summary>
+            <param name="rng"></param>
+            <param name="wdAlignParagraphStyle"></param>
+        </member>
+        <member name="M:GC.WordObject.SetStringStyle2(Word.Range,Word.WdParagraphAlignment,System.Int32)">
+            <summary>
+            设置文字风格2
+            </summary>
+            <param name="rng"></param>
+            <param name="wdAlignParagraphStyle"></param>
+        </member>
+        <member name="M:GC.WordObject.InsertTable(System.String,System.Int32,System.Int32)">
+            <summary>
+            插入表格
+            </summary>
+            <param name="strTitle"></param>
+            <param name="rowLength"></param>
+            <param name="columnLength"></param>
+        </member>
+        <member name="M:GC.WordObject.SetColumnStyle(System.Int32,System.Int32,System.Double,System.String)">
+            <summary>
+            设置表列风格
+            </summary>
+            <param name="tableNO">表号</param>
+            <param name="columnNO">列号</param>
+            <param name="sizeNum">列宽</param>
+        </member>
+        <member name="M:GC.WordObject.SetColumnStyle2(Word.Table,System.Int32,System.Double,System.String)">
+            <summary>
+            设置表列风格2
+            </summary>
+            <param name="v_tb">当前表信息</param>
+            <param name="columnNO">列号</param>
+            <param name="sizeNum">列宽</param>
+        </member>
+        <member name="M:GC.WordObject.SetRowStyle(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置表行风格
+            </summary>
+            <param name="tableNO">表号</param>
+            <param name="rowNO">行号</param>
+            <param name="sizeNum">行高</param>
+        </member>
+        <member name="M:GC.WordObject.SetRowStyle2(Word.Table,System.Int32,System.Int32)">
+            <summary>
+            设置表行风格2
+            </summary>
+            <param name="tableNO">表号</param>
+            <param name="rowNO">行号</param>
+            <param name="sizeNum">行高</param>
+        </member>
+        <member name="M:GC.WordObject.SetTableCellsInfo(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            设置表格信息
+            </summary>
+            <param name="tableNO">表号</param>
+            <param name="cellRow">行</param>
+            <param name="cellColumn">列</param>
+            <param name="content">内容</param>
+        </member>
+        <member name="M:GC.WordObject.SetTableCellsInfo2(Word.Table,System.Int32,System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>
+            设置表格信息2
+            </summary>
+            <param name="tableNO">表号</param>
+            <param name="cellRow">行</param>
+            <param name="cellColumn">列</param>
+            <param name="content">内容</param>
+        </member>
+        <member name="M:GC.WordObject.SetTableCellsInfo(System.Int32,System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            设置表格信息
+            </summary>
+            <param name="tableNO">表号</param>
+            <param name="cellRow">行</param>
+            <param name="cellColumn">列</param>
+            <param name="content">内容</param>
+        </member>
+        <member name="M:GC.WordObject.SetTableStyle(System.Int32)">
+            <summary>
+            设定表样式
+            </summary>
+            <param name="tableNO">表号</param>
+        </member>
+        <member name="M:GC.WordObject.SetTableStyle2(Word.Table)">
+            <summary>
+            设定表样式2
+            </summary>
+            <param name="tableNO">表号</param>
+        </member>
+        <member name="M:GC.WordObject.SetTableStyle2(Word.Table,System.Int32)">
+            <summary>
+            设定表样式2
+            </summary>
+            <param name="tableNO">表号</param>
+        </member>
+        <member name="M:GC.WordObject.SetTitleParagraphsInfo(Word.Range@,Word.Range@,System.String,System.Int32)">
+            <summary>
+            插入段落文字信息
+            </summary>
+            <param name="firstRange">游标位</param>
+            <param name="nextRange">当前位</param>
+            <param name="prText">内容</param>
+            <param name="paragraphsNO">段落号</param>
+        </member>
+        <member name="M:GC.WordObject.SetTitleParagraphsInfo(Word.Range@,Word.Range@,System.String,System.Object,System.Int32)">
+            <summary>
+            插入段落文字信息（重载）--TITLE
+            </summary>
+            <param name="firstRange">游标位</param>
+            <param name="nextRange">当前位</param>
+            <param name="prText">内容</param>
+            <param name="titleStyle">标题风格</param>
+            <param name="paragraphsNO">段落号</param>
+        </member>
+        <member name="M:GC.WordObject.SetTitleParagraphsInfo(Word.Range@,Word.Range@,System.String,System.Int32,System.Boolean)">
+            <summary>
+            插入段落文字信息
+            </summary>
+            <param name="firstRange">游标位</param>
+            <param name="nextRange">当前位</param>
+            <param name="prText">内容</param>
+            <param name="paragraphsNO">段落号</param>
+        </member>
+        <member name="M:GC.WordObject.SetTableParagraphsInfo(Word.Range@,Word.Range@,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            插入段落表格信息
+            </summary>
+            <param name="firstRange">游标位</param>
+            <param name="nextRange">当前位</param>
+            <param name="paragraphsNO">段落号</param>
+            <param name="rowNum">行号</param>
+            <param name="columnNum">列号</param>
+            <returns></returns>
+        </member>
+        <member name="M:GC.WordObject.SetTitleStyle(System.Int32)">
+            <summary>
+            设定标题
+            </summary>
+            <param name="parafraphsNO">段落号</param>
+        </member>
+        <member name="M:GC.WordObject.SetTablesOfContents(Word.Range,System.Object,System.Object)">
+            <summary>
+            设置目录    
+            </summary>
+        </member>
+        <member name="M:GC.WordObject.SetListIndex(System.Int32)">
+            <summary>
+            缩进标题
+            </summary>
+            <param name="paragraphsNO">段落号</param>
+        </member>
+        <member name="M:GC.WordObject.GetStartFlag(System.Object)">
+            <summary>
+            获取起始位置
+            </summary>
+            <param name="findText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GC.WordObject.GetParagraphCount">
+            <summary>
+            获取当前段落
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GC.WordObject.GetTableCount">
+            <summary>
+            获取当前表数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GC.WordObject.DocumentSaveAs(System.String)">
+            <summary>
+            文件另存为
+            </summary>
+        </member>
+        <member name="M:GC.WordObject.DocumentClose">
+            <summary>
+            文件不保存关闭
+            </summary>
+        </member>
+        <member name="M:GC.WordObject.GoToTheEnd">
+            <summary>
+            去到文档末尾
+            </summary>
+        </member>
+        <member name="M:GC.WordObject.GoToTheHead">
+            <summary>
+            去到文档开头
+            </summary>
+        </member>
+        <member name="M:GC.WordObject.GoToNextPage">
+            <summary>
+            翻页
+            </summary>
+        </member>
+        <member name="M:GC.WordObject.InsertText(System.String)">
+            <summary>
+            当前位置插入文档
+            </summary>
+            <param name="strText"></param>
+        </member>
+        <member name="M:GC.WordObject.InsertText2(System.String)">
+            <summary>
+            带换行符的，当前位置插入文档
+            </summary>
+            <param name="strText"></param>
+        </member>
+        <member name="M:GC.WordObject.InsertLineBreak">
+            <summary>
+            换1行：
+            </summary>
+        </member>
+        <member name="M:GC.WordObject.InsertLineBreak(System.Int32)">
+            <summary>
+            换N行：
+            </summary>
+            <param name="nline"></param>
+        </member>
+        <member name="M:GC.WordObject.InsertPageNumber">
+            <summary>
+            插入当前页码
+            </summary>
+        </member>
+        <member name="M:GC.WordObject.InsertPageNumberTotal">
+            <summary>
+            插入总页码
+            </summary>
+        </member>
+        <member name="M:GC.WordObject.SetBookMarkValue">
+            <summary>
+            获取书签的位置，并且插入内容
+            </summary>
+        </member>
+        <member name="M:GC.WordObject.SetBookMarkValue(EI.EIInfo)">
+            <summary>
+            获取书签的位置，并且插入动态内容
+            </summary>
+        </member>
+    </members>
+</doc>

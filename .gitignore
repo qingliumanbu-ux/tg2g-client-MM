@@ -1,0 +1,14 @@
+# Visual Studio / build
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.vspscc
+*.vssscc
+
+# logs & backups
+logger.txt
+*.log
+*.bak
+*.bak1

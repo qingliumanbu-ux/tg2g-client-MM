@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="efRichTextBox2.Text" xml:space="preserve">
+    <value>操作说明：
+**.   调用物料跟踪事件的请看  抛帐参数
+**.   设置物料跟踪事件的请看  参数维护
+**.    接口参数：是-需要抛接口，否-不需要抛接口。（不参与99函数跟踪的处理逻辑）
+**.    接口参数是否为空：不可为空-必须传入，可为空-必须传入,可将表中字段修改为空。（99函数跟踪根据该字段校验传入参数）
+**.   字段修改类型：修改类是指修改主档表的字段。（99跟踪函数根据修改类字段修改主档）
+**.   字段修改方式：
+**.   参数数值是0-接口类不修改主档表
+**.   参数数值是1-接口值，按接口参数值修改主档
+**.   参数数值是2-固定值  按固定值修改主档字段，特殊情况：@表示将表中字段字符型修改为空，数值型修改为0；
+**.   参数数值是3-表中字段，读取主档表[字段设置值]列的值放入字段英文名列并修改。按表中则字段英文名和修改字段名在主档表类型相同，同为string或decimal
+**.   参数数值是4-特殊处理，字段说明如下
+      字段是HOLD_FLAG
+               字段设置值是空，则根据传入参数处理，若传入参数为空或无HOLD_FLAG列，则不处理。
+              传入参数或字段设置值为P0-管理释放/Q0-质量释放/1-管理封锁/2-质量封锁，修改函数中会根据表中原有HOLD_FLAG的值来确定封锁标记
+      字段是NEXT_WHOLE_BACKLOG_CODE
+              字段设置值是PRODUCT_FLAG 则传入参数NEXT_WHOLE_BACKLOG_CODE不能为空，
+                                                           传入值是9A，PRODUCT_FLAG成品标记是1,否则是0，同时修改表中的NEXT_WHOLE_BACKLOG_CODE和PRODUCT_FLAG。
+                                                           PRODUCT_FLAG不需单独在参数维护中配置列
+                                                           (针对厚板，传入值是9开头但不是91(比如92，9A)，则成品标记是1，否则是0.厚板判形合后是成品)
+      字段是PRODUCT_FLAG
+              判断材料当前档NEXT_WHOLE_BACKLOG_CODE是9A，成品标记PRODUCT_FLAG是1否则是0
+              (针对厚板，当前档NEXT_WHOLE_BACKLOG_CODE是9开头但不是91(比如92，9A)，则成品标记是1，否则是0.厚板判形合后是成品)
+**.   字段类型：纯指导，不参与99函数的处理逻辑
+      C-关键字段不可改：该事件中该字段不可修改，否则会造成不可预知的错误
+      D-项目可定制：不影响流程的字段,可根据项目实际需求定制
+      F-可定制，需确定接口：不影响流程的字段,可根据项目实际需求定制，但是修改后需确定调用点不会错。
+**.   字段种类 S表示字符型，D型表示数值型 （99跟踪函数根据字段种类校验和设置字段值）
+
+**.参数维护中前六列到“字段修改方式”是必填项</value>
+  </data>
+  <data name="efRichTextBox4.Text" xml:space="preserve">
+    <value>调用说明：
+**  针对各主档表，分别调用不同的物料跟踪函数。例：针对炼钢主档表，调用f_mmsm99。
+**  每个物料跟踪函数接收块名均为 MM0099
+**  99函数接受多记录,但事件号和事件产线类型必须一样
+**  99函数对主档表的修改原则,根据传入参数修改,99函数不做校验和传入数值的变化.
+**  调用代码示例 ：		
+/* 添加并设置块名*/
+blkNum = bcls_rec-&gt;Tables.IndexOf("MM0099");
+if (blkNum &lt; 0)
+{
+	bcls_rec-&gt;Tables.Add("MM0099"); 
+	bcls_rec-&gt;Tables["MM0099"].Columns.Add(DT_STRING,"EVENT_ID");
+	bcls_rec-&gt;Tables["MM0099"].Columns.Add(DT_STRING,"EVENT_LINE_TYPE");
+	bcls_rec-&gt;Tables["MM0099"].Columns.Add(DT_STRING,"SYSTEM_ID");
+	bcls_rec-&gt;Tables["MM0099"].Columns.Add(DT_STRING,"FUNC_ID");
+	bcls_rec-&gt;Tables["MM0099"].Columns.Add(DT_STRING,"MAT_NO");
+	bcls_rec-&gt;Tables["MM0099"].Rows.Add(); // 创建一行
+}
+
+/* 设置物料跟踪参数*/
+bcls_rec-&gt;Tables["MM0099"].Rows[0]["EVENT_ID"]		= "MM02"; 
+bcls_rec-&gt;Tables["MM0099"].Rows[0]["EVENT_LINE_TYPE"]	= "00"; 
+bcls_rec-&gt;Tables["MM0099"].Rows[0]["SYSTEM_ID"]		= "MMBW"; 
+bcls_rec-&gt;Tables["MM0099"].Rows[0]["FUNC_ID"]		= "mmbw01a1f3_ins"; 
+bcls_rec-&gt;Tables["MM0099"].Rows[0]["MAT_NO"]		= tmmbw01.MAT_NO; 
+doFlag = f_mmbw99(bcls_rec, bcls_ret,conn);
+if(doFlag &lt; 0)
+{
+	throw CApplicationException(doFlag, s.msg, log.Location);
+}</value>
+  </data>
+  <data name="efRichTextBox3.Text" xml:space="preserve">
+    <value>操作说明：
+**.   事件号命名时，针对不同的业务，MMS和PES的事件号不要冲突，不利于合并。 第三位数值，代表产品化事件，如MM01，项目组定制，建议第三位用字母，即MMA1,
+**.   产线类型 全产线是指适合各产线。若单独产线与全产线不同，可新增产线类型，全产线必须保留。
+**.   新增类事件，调用99函数之前不再新增主档，按TMMXX96结构体传入，由99函数新增主档，调用99时若MAT_ID为空，则99自动生成MAT_ID.
+**.   归历史档和材料删除不支持并行。
+**.   厚板产线的TMMSM01和TMMHP01归历史档和材料删除，会将材料档、目的档、工序档同时归档或删除。
+**.  新增类型区分为：1-产出新增；2-原料新增；3-盘库新增；原来设为勾选时，默认是1
+     新增类型区别重点在于，是否写跟踪树。
+     新增类型为2-原料新增和3-盘库新增时，物料跟踪99函数会自动新增路径表TMM0005，不需再另外调用f_mm000501_proc函数，也不需要另外生成物料跟踪号，物料跟踪号和主档的MAT_ID一致。
+     新增类型为2或3，只是代码说明的区别，99函数处理是一样的。
+     新增类型为1-产出新增时，程序在调用物料跟踪99函数后，还需要另外调用f_mm000501_proc函数，炼钢产出还需生成物料跟踪号。
+</value>
+  </data>
+</root>
